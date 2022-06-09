@@ -20,7 +20,7 @@ const dishes = [
     {
         name: 'Tuscany Chicken',
         info: 'mit frisch gegrillten Hähnchen-Filetstreifen (deutsche Herkunft), Roast Potatoes, sonnengereiften Kirschtomaten, Oliventapenade, Frühlingszwiebeln, original Gran Soresina (ital. Premium Hartkäse) und gerösteten Croûtons. Dazu empfehlen wir unser Rucola Dressing',
-        pic: 'img/dish-3.jpeg',
+        pic: 'img/dish-4.jpeg',
         price: 13.25,
     },
     {
