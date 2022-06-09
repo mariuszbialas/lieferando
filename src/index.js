@@ -16,8 +16,8 @@ function renderMenu() {
         const element = dishes[i];
         
         menu.innerHTML += `
-            <div class="menu__dish" id="dish1"> 
-                <div class="dish-to-basket">
+            <div class="menu__dish" id="dish-${i}"> 
+                <div class="dish-to-basket" onclick="addToBasket(${i})">
                     <p>+</p>
                 </div>
                 <div class="dish-info">

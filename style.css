@@ -154,7 +154,13 @@ section.restaurant__info {
     right: 0;
     width: 1.5rem;
     height: 1.5rem;
-    border: 1px solid #333;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+.dish-to-basket p {
+    font-weight: bold;
 }
 
 .dish-info {
