@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <script src="src/basket.js"></script>
     <title>lieferando</title>
 </head>
+
 <body onload="renderMenu()">
 
     <header class="header">
@@ -18,26 +20,26 @@
             <span>&#10094;</span>
             <img src="img/all-square-white.png" alt="Lieferando.de">
         </div>
-        
+
         <div class="header__address">
             <span>66131 Saarbrücken</span>
         </div>
-        
+
         <div>
             <div class="header__language"></div>
             <div class="header__bar-menu">
                 <img src="img/menu-4-64.png" alt="">
             </div>
         </div>
-        
+
     </header>
-    
+
     <section class="restaurant__info">
-        
+
         <div class="restaurant__info-img"></div>
 
         <div class="restaurant__info-logo"></div>
-        
+
         <div class="restaurant__info-txt">
             <p>Fresh&Tasty Barbecue</p>
             <span>&#9733;</span>
@@ -58,11 +60,11 @@
         </div>
 
     </section>
-    
+
     <main>
         <div id="menu"></div>
     </main>
-    
+
     <aside class="basket__shop-desktop">
         <p>Warenkorb!</p>
         <div id="basket-shop">
@@ -71,11 +73,25 @@
             <p>Füge einige leckere Gerichte aus der Speisekarte</p>
             <p>hinzu und bestelle dein Essen.</p>
         </div>
-    </aside>
+
+        <div class="menu-added-to-basket">
+            <div class="menu-added-to-basket__info">
+                <div>
+                    <span>1</span>
+                    <span>Gerichte Name</span>
+                </div>
+                <span>5,50€</span>
+            </div>
+            <span>mit ............</span>
+        </div>
     
+        </div>
+    </aside>
+
     <footer>
         <div class="footer__basket-bar"></div>
     </footer>
-    
+
 </body>
-</html> 
+
+</html>
