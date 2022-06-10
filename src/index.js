@@ -35,3 +35,7 @@ function renderMenu() {
         `;
     }
 }
+
+function renderAdToBasket(number) {
+    
+}
