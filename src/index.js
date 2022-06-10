@@ -1,10 +1,10 @@
 window.onscroll = function () {
-    const shopBasket = document.querySelector('.basket__shop-desktop');
+    const shopBasketScroll = document.querySelector('.basket__shop-desktop');
 
     if (window.scrollY > 0) {
-        shopBasket.style = 'top: 0; height: 100vh;';
+        shopBasketScroll.style = 'top: 0; height: 100vh;';
     } else {
-        shopBasket.style = 'top: 10vh; height: 90vh;';
+        shopBasketScroll.style = 'top: 10vh; height: 90vh;';
     }
 }
 

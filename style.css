@@ -15,6 +15,10 @@ body {
     font-family: Takeaway Sans, Avant Garde, Century Gothic, Helvetica, Arial, sans-serif;
 }
 
+.d-none {
+    display: none;
+}
+
 /* section HEADER */
 .header {
     display: flex;
@@ -236,7 +240,7 @@ section.restaurant__info {
     border-bottom: 1px solid #ccc;
 }
 
-#basket-shop {
+#basket-info {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -244,17 +248,17 @@ section.restaurant__info {
     text-align: center;
 }
 
-#basket-shop img {
+#basket-info img {
     width: 15%;
     margin: 0 auto;
 }
 
-#basket-shop p {
+#basket-info p {
     font-size: 14px;
     color: #666;
 }
 
-#basket-shop p:nth-child(2) {
+#basket-info p:nth-child(2) {
     margin: 1rem 0;
     font-size: 18px;
     font-weight: bold;
