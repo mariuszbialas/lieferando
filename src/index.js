@@ -36,12 +36,18 @@ function renderMenu() {
     }
 }
 
-function renderAdToBasket(number) {
+function renderAddToBasketBtn(number) {
     const adToBasket = document.getElementById(`dish-${number}`);
     if(adToBasket.innerText === '+') {
         adToBasket.innerText = 1;
     } else {
         adToBasket.innerText = Number(adToBasket.innerText) +1;
-    }
-    console.log(adToBasket.innerText);
-}
+    };
+};
+
+function renderRemoveFromBasketBtn() {
+    
+    for (let i = 0; i < dishes.length; i++) {
+        document.getElementById(`dish-${i}`).innerText = '+';
+    };
+};
