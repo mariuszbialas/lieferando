@@ -204,12 +204,12 @@ section.restaurant__info {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* max-width: 30%; */
+    width: 30%;
 
 }
 
 .dish-info-pic img {
-    max-width: 80%;
+    width: 110px;
     border-radius: 50%;
 }
 
