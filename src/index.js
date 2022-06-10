@@ -1,5 +1,5 @@
 window.onscroll = function () {
-    const shopBasket = document.getElementById('basket-shop');
+    const shopBasket = document.querySelector('.basket__shop-desktop');
 
     if (window.scrollY > 0) {
         shopBasket.style = 'top: 0; height: 100vh;';

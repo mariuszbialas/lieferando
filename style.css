@@ -144,7 +144,7 @@ section.restaurant__info {
 .menu__dish {
     position: relative;
     display: flex;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     margin-bottom: 1rem;
 }
 
@@ -154,11 +154,12 @@ section.restaurant__info {
     right: 0;
     width: 1.5rem;
     height: 1.5rem;
-    border-left: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
     cursor: pointer;
 }
+
 .dish-to-basket p {
     font-weight: bold;
 }
@@ -232,4 +233,29 @@ section.restaurant__info {
     padding: 1rem;
     text-align: center;
     font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+#basket-shop {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#basket-shop img {
+    width: 15%;
+    margin: 0 auto;
+}
+
+#basket-shop p {
+    font-size: 14px;
+    color: #666;
+}
+#basket-shop p:nth-child(2) {
+    margin: 1rem 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
 }

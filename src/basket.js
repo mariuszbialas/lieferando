@@ -16,3 +16,7 @@ function addToBasket(number) {
 function clearBasket() {
     basket.length = 0;
 }
+
+function renderBasket() {
+    
+}
