@@ -11,7 +11,7 @@ function clearBasket() {
     renderRemoveFromBasketBtn();
 }
 
-function renderBasket(number) {
+function renderBasket() {
     document.getElementById('basket-info').style = 'display: none';
 
     const showBasket = document.getElementById('basket-shop');
@@ -25,7 +25,7 @@ function renderBasket(number) {
         <div class="menu-added-to-basket">
             <div class="menu-added-to-basket__info">
                 <div>
-                    <span>${i + 1}</span>
+                    <span>${item.amount}</span>
                     <span>${item.name}</span>
                 </div>
                 <span>${priceFormat}</span>
@@ -48,7 +48,7 @@ function renderBasketBar() {
     const totalFormat = String(total).replace('.', ',');
 
     basketBar.innerHTML =
-    `
+        `
         <div class="basket-bar__subtotal">
            <span>Zwischensumme</span>
             <span>${subTotalFormat} €</span>
@@ -72,14 +72,19 @@ function renderBasketBar() {
 
 function addToBasket(number) {
     const dishToBasket = dishes[number];
+    const dishIndex = basket.findIndex(item => item.dish === number);
 
-    basket.push({
-        
-        name: dishToBasket.name,
-        note: dishToBasket.note,
-        price: dishToBasket.price,
-
-    });
+    if (dishIndex < 0) {
+        basket.push({
+            dish: number,
+            name: dishToBasket.name,
+            note: dishToBasket.note,
+            price: dishToBasket.price,
+            amount: 1,
+        });
+    } else {
+        basket[dishIndex].amount++;
+    };
 
     basketSubtotal.push(Number(dishToBasket.price));
 
@@ -87,3 +92,14 @@ function addToBasket(number) {
     renderBasket(number);
     renderBasketBar();
 };
+
+function testAmounts(number) {
+
+    const index = basket.findIndex(item => item.dish === number);
+
+    basket[index].amount ++;
+
+    renderBasket();
+
+
+}
