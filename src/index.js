@@ -25,7 +25,7 @@ function renderMenu() {
                         <p>${element.name}</p>
                         <p>${element.info}</p>
                         <p></p>
-                        <p>${element.price} €</p>
+                        <p>${(element.price).replace('.', ',')} €</p>
                     </div>
                     <div class="dish-info-pic">
                         <img src="${element.pic}" alt="">
