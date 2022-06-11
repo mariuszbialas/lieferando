@@ -18,7 +18,7 @@ function renderBasket(number) {
 
     for (let i = 0; i < basket.length; i++) {
         const item = basket[i];
-        
+
         showBasket.innerHTML += `
         <div class="menu-added-to-basket">
             <div class="menu-added-to-basket__info">
@@ -38,25 +38,27 @@ function renderBasketBar() {
     const basketBar = document.getElementById('basket-bar');
     const subTotal = basketSubtotal.reduce((sum, item) => sum + item, 0);
     const total = (subTotal + deliveryCost).toFixed(2);
-    
-    basketBar.innerHTML = `
+
+    basketBar.innerHTML =
+    `
         <div class="basket-bar__subtotal">
-                <span>Zwischensumme</span>
-                <span>${subTotal} €</span>
-            </div>
+           <span>Zwischensumme</span>
+            <span>${subTotal.toFixed(2)} €</span>
+        </div>
 
-            <div class="basket-bar__subtotal">
-                <span>Lieferkosten</span>
-                <span>${deliveryCost} €</span>
-            </div>
+        <div class="basket-bar__subtotal">
+            <span>Lieferkosten</span>
+            <span>${deliveryCost} €</span>
+        </div>
 
-            <div class="basket-bar__total">
-                <span>Gesamt</span>
-                <span>${total} €</span>
-            </div>
-            <div class="basket-bar__total-btn" onclick="clearBasket()">
-                <span>Bezahlen (${total} €)</span>
-            </div>
+        <div class="basket-bar__total">
+            <span>Gesamt</span>
+            <span>${total} €</span>
+        </div>
+
+        <div class="basket-bar__total-btn" onclick="clearBasket()">
+            <span>Bezahlen (${total} €)</span>
+        </div>
     `;
 };
 
