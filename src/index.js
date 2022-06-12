@@ -8,6 +8,7 @@ window.onscroll = function () {
     }
 }
 
+
 function renderMenu() {
     const menu = document.getElementById('menu');
     menu.innerHTML = '';
@@ -36,18 +37,8 @@ function renderMenu() {
     }
 }
 
-function renderAddToBasketBtn(number) {
-    const adToBasket = document.getElementById(`dish-${number}`);
-    if(adToBasket.innerText === '+') {
-        adToBasket.innerText = 1;
-    } else {
-        adToBasket.innerText = Number(adToBasket.innerText) + 1;
-    };
-};
 
-function renderRemoveFromBasketBtn() {
-    
-    for (let i = 0; i < dishes.length; i++) {
-        document.getElementById(`dish-${i}`).innerText = '+';
-    };
+function renderAddToBasketBtn(number) {
+    let addToBasket = document.getElementById(`dish-${number}`);
+    addToBasket.innerText === '+' ? addToBasket.innerText = 1 : addToBasket.innerText++ ;
 };

@@ -266,15 +266,13 @@ section.restaurant__info {
 }
 
 .menu-added-to-basket {
-    margin: 1rem;
-    padding-bottom: 1rem;
+    margin: .5rem 1rem;
     font-size: 16px;
     text-align: left;
-    border-bottom: 1px solid #ccc;
 }
 
 .menu-added-to-basket span {
-    margin-bottom: 1rem;
+    margin-bottom: 5px;
     color: #666;
 }
 
@@ -285,6 +283,43 @@ section.restaurant__info {
 
 .menu-added-to-basket__info span {
     font-weight: bold;
+}
+
+.menu-added-to-basket__add-remove {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    margin: 1rem;
+    color: var(--blue);
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu-added-to-basket__add-remove a:visited {
+    color: var(--blue)
+}
+
+.menu-added-to-basket__add-remove div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-added-to-basket__add-remove div>div {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.menu-added-to-basket__add-remove div>div:hover {
+    border-color: #125fca;
+}
+
+.menu-added-to-basket__add-remove span {
+    font-size: 1.5rem;
 }
 
 /* section BASKET BAR */
