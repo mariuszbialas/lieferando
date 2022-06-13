@@ -16,19 +16,12 @@ function clearBasket() {
     };
 }
 
+function generateBasketInnerHTML(i) {
+    const item = basket[i];
+    let subtotalSum = (Number(item.price) * item.count);
+    const priceFormat = `${subtotalSum.toFixed(2)}`.replace('.', ',');
 
-function renderBasket(number) {
-    document.getElementById('basket-info').style = 'display: none';
-
-    const showBasket = document.getElementById('basket-shop');
-    showBasket.innerHTML = '';
-
-    for (let i = 0; i < basket.length; i++) {
-        const item = basket[i];
-        const priceFormat = (item.price).replace('.', ',');
-
-        showBasket.innerHTML += `
-        <div class="menu-added-to-basket">
+    return `<div class="menu-added-to-basket">
             <div class="menu-added-to-basket__info">
                 <div>
                     <span>${item.count}</span>
@@ -49,8 +42,19 @@ function renderBasket(number) {
             </div>
         </div>
     `;
-    };
-};
+}
+
+
+function renderBasket(number) {
+    document.getElementById('basket-info').style = 'display: none';
+
+    const showBasket = document.getElementById('basket-shop');
+    showBasket.innerHTML = '';
+
+    for (let i = 0; i < basket.length; i++) {
+        showBasket.innerHTML += generateBasketInnerHTML(i);
+    }
+}
 
 
 function formatPriceToShow() {

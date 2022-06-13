@@ -9,15 +9,10 @@ window.onscroll = function () {
 }
 
 
-function renderMenu() {
-    const menu = document.getElementById('menu');
-    menu.innerHTML = '';
+function generateMenuInnerHTML (i) {
+    const element = dishes[i];
 
-    for (let i = 0; i < dishes.length; i++) {
-        const element = dishes[i];
-        
-        menu.innerHTML += `
-            <div class="menu__dish"> 
+    return `<div class="menu__dish"> 
                 <div class="dish-to-basket" onclick="addToBasket(${i})">
                     <p id="dish-${i}">+</p>
                 </div>
@@ -34,6 +29,15 @@ function renderMenu() {
                 </div>
             </div>
         `;
+}
+
+
+function renderMenu() {
+    const menu = document.getElementById('menu');
+    menu.innerHTML = '';
+
+    for (let i = 0; i < dishes.length; i++) {
+        menu.innerHTML += generateMenuInnerHTML(i); 
     }
 }
 
