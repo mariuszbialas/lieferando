@@ -162,14 +162,17 @@ section.restaurant__info {
     border-bottom: 1px solid #ccc;
     background-color: #fff;
     cursor: pointer;
+    user-select: none;
 }
 
 .dish-to-basket p {
     font-weight: bold;
+    user-select: none;
 }
 
 .dish-info {
     display: flex;
+    width: 100%;
 }
 
 .dish-to-basket>p {
@@ -230,7 +233,7 @@ section.restaurant__info {
     border: 2px solid #ccc;
     background-color: #fff;
     transition: all 100ms ease-in-out;
-    box-shadow: 2px 2px 4px #444;
+    box-shadow: 2px 0 6px 0 rgba(0, 0, 0, .2);
 }
 
 .basket-shop__desktop>p {
